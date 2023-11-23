@@ -14,5 +14,6 @@ use App\Http\Controllers\Guest\PageController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::Get('/', [PageController::class, 'index'])->name('home');
 
 Route::resource('comics', ComicController::class);
