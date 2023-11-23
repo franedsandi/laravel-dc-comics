@@ -14,4 +14,4 @@ use App\Http\Controllers\Guest\PageController;
 |
 */
 
-Route::get('/', [PageController::class, 'comic']) -> name('Home');
+Route::get('/', [PageController::class, 'Comics']) -> name('Home');
