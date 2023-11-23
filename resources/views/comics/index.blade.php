@@ -14,6 +14,7 @@
         <p>Price:{{$comic->price}}</p>
         <p>Series:{{$comic->series}}</p>
         <p>Releazed on; {{$comic->sale_date}}</p>
+        <a class="btn btn-outline-warning" href="{{route('comics.show', $comic->id) }}"><i class="fa-solid fa-pen"></i></a>
     </div>
 </div>
 @endforeach
