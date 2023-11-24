@@ -1,7 +1,7 @@
 @extends('layout.main')
 @section('content')
 <h1>Comics</h1>
-@foreach ($comics as $comic )
+@foreach ($comics as $comic)
 <div class="card mt-4">
     <div class="card-header">
       {{$comic->title}}
@@ -13,11 +13,11 @@
         </div>
         <p>Price:{{$comic->price}}</p>
         <p>Series:{{$comic->series}}</p>
-        <p>Releazed on; {{$comic->sale_date}}</p>
-        <a class="btn btn-outline-warning" href="{{route('comics.show', $comic->id) }}"><i class="fa-solid fa-pen"></i></a>
+        <p>Releazed on: {{$comic->sale_date}}</p>
+        @include('partials.info')
     </div>
 </div>
 @endforeach
-
+{{$comics->links()}}
 
 @endsection
