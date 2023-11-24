@@ -8,6 +8,10 @@
     <p class=" fs-5">Series:{{$comic->series}}</p>
     <p class=" fs-6 align-self-start">Writted By: {{$comic->writers}}</p>
     <p class=" fs-6 align-self-start">Designed By: {{$comic->artists}}</p>
-    @include('partials.edit')
+    <div class="botons d-flex gap-3">
+        @include('partials.edit_boton')
+        @include('partials.delete_boton')
+    </div>
+
 </div>
 @endsection
