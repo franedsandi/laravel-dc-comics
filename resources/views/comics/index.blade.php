@@ -15,6 +15,7 @@
         <p>Series:{{$comic->series}}</p>
         <p>Releazed on: {{$comic->sale_date}}</p>
         @include('partials.info')
+        @include('partials.edit')
     </div>
 </div>
 @endforeach
