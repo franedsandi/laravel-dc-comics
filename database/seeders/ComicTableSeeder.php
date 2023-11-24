@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
+use Illuminate\Support\Arr;
 use App\Models\Comic;
 
 class ComicTableSeeder extends Seeder
@@ -23,9 +24,12 @@ class ComicTableSeeder extends Seeder
             $new_comic->slug = $this->generateSlug($new_comic->title);
             $new_comic->description = $comic['description'];
             $new_comic->thumb = $comic['thumb'];
+            $new_comic->artists = Arr::join($comic['artists'], ", ");
+            $new_comic->writers = Arr::join($comic['writers'], ", ");
             $new_comic->price = $comic['price'];
             $new_comic->series = $comic['series'];
             $new_comic->sale_date = $comic['sale_date'];
+            $new_comic->type = $comic['type'];
             $new_comic->type = $comic['type'];
             $new_comic->save();
         }
